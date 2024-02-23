@@ -26,7 +26,31 @@ class ProductsActivity : AppCompatActivity() {
         var adaptador: AdaptadorProductos = AdaptadorProductos(this,menu)
         listView.adapter = adaptador
 
+        var image: ImageView = findViewById(R.id.imageViewFondo)
 
+
+        when(menuOption){
+            "Antojitos" -> {
+                image.setImageResource(R.drawable.antojitos)
+            }
+            "Especialidades" ->{
+                image.setImageResource(R.drawable.especialidades)
+
+            }
+            "Combinations" ->{
+                image.setImageResource(R.drawable.combinations)
+            }
+            "Drinks" ->{
+                image.setImageResource(R.drawable.drinks)
+
+            }
+            "Sopas" ->{
+                image.setImageResource(R.drawable.sopas)
+            }
+            "Tortas" ->{
+                image.setImageResource(R.drawable.tortas)
+            }
+        }
     }
 
     fun addProducts(option: String?){
@@ -57,6 +81,7 @@ class ProductsActivity : AppCompatActivity() {
                 menu.add(Product("Dos Amigos", R.drawable.dosamigos, "Two hard shell tacos with your choice of meat topped with lettuce and shredded cheese. served with a side of rice and beans", 9.99))
                 menu.add(Product("Burrito Pepe", R.drawable.burritopepe, "Flour tortilla filled with your choice of meat with beans, lettuce, sour cream, guacamole and pico de gallo. served with a side of rice.", 9.99))
                 menu.add(Product("Fajita Quesadilla", R.drawable.fajitaquesadilla, "Quesadilla extra grande (10 inches), rellena con tu carne favorita, cebolla asada, chile banana y jitomate. Servida con arroz, frijoles y ensalada - 10 inches quesadilla filled with your choice of meat, cooked with grilled onions, banana peppers and tomatoes. Served with rice beans and salad.", 13.99))
+
             }
 
             "Drinks" ->{
